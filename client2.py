@@ -2,8 +2,8 @@ import socket
 
 
 def function_client():
-    ip = "192.168.99.144"  # IP local ou IP server si distant
-    port = 64500
+    ip="127.0.0.1"                                              #IP local ou IP server si distant
+    port=64000
     s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)  # Créé un objet socket
     s.connect((ip, port))  # Connecter au socket
 
