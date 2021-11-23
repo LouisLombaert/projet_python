@@ -3,8 +3,8 @@ import socket
 
 def function_server():
     """création d'une conversation entre le client et le serveur"""
-    my_ip = "192.168.99.144"  # IP local ou IP server si distant
-    my_port = 64500
+    myIP="127.0.0.1"                                        #IP local ou IP server si distant
+    myPort=64000
     buffer_size = 1024
 
     s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)  # Créé un objet socket
