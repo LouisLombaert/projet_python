@@ -9,7 +9,7 @@ def function_server():
     buffer_size = 1024
 
     s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)  # Créé un objet socket
-    s.bind((myIP, myPort))  # Initialisation socket
+    s.bind((my_ip, my_port))  # Initialisation socket
     s.listen(1)  # Ecoute une connexion
     (cl, adress) = s.accept()  # Récupere coordonée client et attibution variable
 
