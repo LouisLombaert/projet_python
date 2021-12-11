@@ -4,8 +4,8 @@ import unittest
 
 def function_server():
     """création d'une conversation entre le client et le serveur"""
-    myIP="127.0.0.1"                                        #IP local ou IP server si distant
-    myPort=63000
+    my_ip = "127.0.0.1"                                        #IP local ou IP server si distant
+    my_port = 63000
     buffer_size = 1024
 
     s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)  # Créé un objet socket
@@ -23,6 +23,7 @@ def function_server():
 
         rep = input('Votre réponse : ')
         cl.send(rep.encode())
+
 
 class TestServer(unittest.TestCase):
     def test_str(self):
