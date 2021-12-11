@@ -14,7 +14,8 @@ class Channel:
             chat_history = []
         self.channel_name = channel_name
         self.channel_admin = channel_admin
-        self.channel_members = channel_members.append(self.channel_admin)  # pour moi channel_members serait une
+        channel_members.append(self.channel_admin)
+        self.channel_members = channel_members  # pour moi channel_members serait une
         # liste de string (comme ça on peut ajouter et supprimer des membres facilement
         self.chat_history = chat_history  # même chose que pour channel_members
 
