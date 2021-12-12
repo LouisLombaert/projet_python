@@ -10,21 +10,18 @@ def function_client():
 
     msg = ''
 
+    pseudo = input('Pseudo ?')
+
     while msg != 'Bye':
         """tant que le client n'envoi pas 'Bye', la conversation continue"""
-        msg = input('Votre message : ')
-        s.send(msg.encode())
+        msg = input(pseudo + ': ')
+        donnee = pseudo + ': ' + msg
+        s.send(donnee.encode())
 
         rep = s.recv(1024)  # En attente de réception
         rep = rep.decode()
-        print("                                                 Nathan 2 : '{}'".format(rep))
-
-class TestClient(unittest.TestCase):
-    def test_str(self):
-        msg = ''
-        self.assertEqual(msg, '')
+        print("                                                 : '{}'".format(rep))
 
 if __name__ == "__main__":
     """appel de la fonction function_client"""
-    #unittest.main()
     function_client()
